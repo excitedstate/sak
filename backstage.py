@@ -21,9 +21,9 @@ def main():
     print("开始更新数据")
     Thread(target=update_news).start()
     # # 美股数据
-    # Thread(target=update_us_stock).start()
+    Thread(target=update_us_stock).start()
     # # 港股数据
-    # Thread(target=update_hk_stock).start()
+    Thread(target=update_hk_stock).start()
 
 
 if __name__ == '__main__':
