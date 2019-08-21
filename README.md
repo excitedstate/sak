@@ -3,7 +3,7 @@
 ---
 >> SAK(Stock Analyse Kits) is A desktop application based on ML and PyQt5. 
 ---
-## Sure that these packages has been installed...
+## Sure that these packages have been installed...
 - PyQt5 >= 5.13.0
 - PyQtChart >= 5.13.0
 - jieba-fast >= 0.53 (required Microsoft Visual C++)
