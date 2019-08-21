@@ -10,7 +10,7 @@ class SAKSqlDBS:
                                       password='your password',
                                       charset="utf8",
                                       database='your database',
-                                      port=10164)
+                                      port='your port, int')
         except Exception as e:
             print(e)
             self.__init__()
