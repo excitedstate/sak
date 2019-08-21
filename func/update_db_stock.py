@@ -5,7 +5,7 @@ import tushare as ts
 
 def get_stock_info(db):
     # # 传入的是一个数据库对象
-    pro = ts.pro_api('30d71042b9fd2cfc2fa40e23caaf1adebd069b3e323bd11e6cc54a37')
+    pro = ts.pro_api('your tushare api key')
     data = pro.stock_basic(exchange='', list_status='L', fields='ts_code,symbol,name,area,industry,list_date')
     data = json.loads(data.to_json(orient='index',force_ascii=False))
     i=0
@@ -21,7 +21,7 @@ def update_hk_stock(start=1, end=3656):
     # # 登陆数据库
     db = SAKSqlDBS()
     # # 初始化tushare接口
-    pro = ts.pro_api('30d71042b9fd2cfc2fa40e23caaf1adebd069b3e323bd11e6cc54a37')
+    pro = ts.pro_api('your tushare api key')
     # # 获取当前时间
     end_date= get_today_date()
     start_date = calendar[calendar.index(end_date)-200]
