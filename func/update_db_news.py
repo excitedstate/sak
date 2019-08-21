@@ -6,7 +6,7 @@ def update_news_daily():
     db = SAKSqlDBS()
     sql_query = '''delete from sak_news where date = '%s' ''' % get_today_date()
     db.exec_sql_query(sql_query)
-    pro = ts.pro_api('30d71042b9fd2cfc2fa40e23caaf1adebd069b3e323bd11e6cc54a37')
+    pro = ts.pro_api('your tushare api key')
     srcs = ['sina','10jqka','eastmoney','yuncaijing']
     calendar = get_the_calendar(2019, 2020)
     start_date = get_today_date()
