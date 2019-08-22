@@ -21,8 +21,8 @@ class MainWindow(QMainWindow):
         # # 窗口属性
         self.desktop = QApplication.desktop()
         self.screen = self.desktop.screenGeometry()
-        self.s_width = self.screen.height()
-        self.s_height = self.screen.width()
+        self.s_width = self.screen.width()
+        self.s_height = self.screen.height()
         # #创建状态栏
         self.status_bar = self.statusBar()
         # #创建菜单栏
@@ -56,9 +56,9 @@ class MainWindow(QMainWindow):
         self.dic_stock, self.dic_news = self.get_response.flow()
         # self.import_from_the_file()
         self.purge_the_response()
-        self.qFont = QFont("SimHei", int(self.s_height*(20/self.s_height)))
+        self.qFont = QFont("SimHei", int(self.s_height * (20 / 1080)))
         if platform.system() == 'Darwin':
-            self.qFont = QFont('STHeiti', int(self.s_height*(20/self.s_height)))
+            self.qFont = QFont('STHeiti', int(self.s_height * (20 / 1080)))
         self.op = QGraphicsOpacityEffect()
         # # 表格相关
         self.line_series = QLineSeries()
@@ -91,17 +91,29 @@ class MainWindow(QMainWindow):
         # palette.setColor(palette.Background, QColor(0, 0, 0))
         self.setPalette(palette)
         # #布局
-        self.s_width = 1960
-        self.s_height = 1080
         self.setGeometry(0, 0, self.s_width, self.s_height)
-        self.status_bar.setGeometry(int(self.s_width*(20/self.s_width)), int(self.s_height*(1060/self.s_height)), int(self.s_width*(1600/self.s_width)), int(self.s_height*(20/self.s_height)))
-        self.menu_bar.setGeometry(int(self.s_width*(0/self.s_width)), int(self.s_height*(0/self.s_height)), int(self.s_width*(1660/self.s_width)), int(self.s_height*(30/self.s_height)))
-        self.chart_view.setGeometry(int(self.s_width*(0/self.s_width)), int(self.s_height*(50/self.s_height)), int(self.s_width*(1600/self.s_width)), int(self.s_height*(500/self.s_height)))
-        self.logo.setGeometry(int(self.s_width*(400/self.s_width)), int(self.s_height*(640/self.s_height)), int(self.s_width*(782/self.s_width)), int(self.s_height*(332/self.s_height)))
-        self.text_browser.setGeometry(int(self.s_width*(10/self.s_width)), int(self.s_height*(540/self.s_height)), int(self.s_width*(1580/self.s_width)), int(self.s_height*(500/self.s_height)))
-        self.list_view.setGeometry(int(self.s_width*(1600/self.s_width)), int(self.s_height*(540/self.s_height)), int(self.s_width*(320/self.s_width)), int(self.s_height*(530/self.s_height)))
-        self.output.setGeometry(int(self.s_width*(1600/self.s_width)), int(self.s_height*(150/self.s_height)), int(self.s_width*(340/self.s_width)), int(self.s_height*(140/self.s_height)))
-        self.sugg.setGeometry(int(self.s_width*(1600/self.s_width)), int(self.s_height*(300/self.s_height)), int(self.s_width*(340/self.s_width)), int(self.s_height*(140/self.s_height)))
+        self.status_bar.setGeometry(int(self.s_width * (20 / 1960)),
+                                    int(self.s_height * (1060 / 1080)),
+                                    int(self.s_width * (1600 / 1960)),
+                                    int(self.s_height * (20 / 1080)))
+        self.menu_bar.setGeometry(int(self.s_width * (0 / 1960)), int(self.s_height * (0 / 1080)),
+                                  int(self.s_width * (1660 / 1960)), int(self.s_height * (30 / 1080)))
+        self.chart_view.setGeometry(int(self.s_width * (0 / 1960)), int(self.s_height * (50 / 1080)),
+                                    int(self.s_width * (1600 / 1960)),
+                                    int(self.s_height * (500 / 1080)))
+        self.logo.setGeometry(int(self.s_width * (400 / 1960)), int(self.s_height * (640 / 1080)),
+                              int(self.s_width * (782 / 1960)), int(self.s_height * (332 / 1080)))
+        self.text_browser.setGeometry(int(self.s_width * (10 / 1960)),
+                                      int(self.s_height * (540 / 1080)),
+                                      int(self.s_width * (1580 / 1960)),
+                                      int(self.s_height * (500 / 1080)))
+        self.list_view.setGeometry(int(self.s_width * (1600 / 1960)),
+                                   int(self.s_height * (540 / 1080)), int(self.s_width * (320 / 1960)),
+                                   int(self.s_height * (530 / 1080)))
+        self.output.setGeometry(int(self.s_width * (1600 / 1960)), int(self.s_height * (150 / 1080)),
+                                int(self.s_width * (340 / 1960)), int(self.s_height * (140 / 1080)))
+        self.sugg.setGeometry(int(self.s_width * (1600 / 1960)), int(self.s_height * (300 / 1080)),
+                              int(self.s_width * (340 / 1960)), int(self.s_height * (140 / 1080)))
         # self.status_bar.setGeometry(20, 1060, 1600, 20)
         # self.menu_bar.setGeometry(0, 0, 1060, 30)
         # self.chart_view.setGeometry(0, 50, 1600, 500)
@@ -135,7 +147,7 @@ class MainWindow(QMainWindow):
         tmp = self.qFont
         tmp.setBold(True)
         self.output.setFont(tmp)
-        tmp.setPixelSize(int(self.s_height*(40/self.s_height)))
+        tmp.setPixelSize(int(self.s_height * (40 / 1080)))
         self.sugg.setFont(tmp)
         self.setWindowIcon(QIcon("./src/app.png"))
         self.output.setAlignment(Qt.AlignCenter)
@@ -292,8 +304,12 @@ class MainWindow(QMainWindow):
     def chosen_item(self):
         self.text_browser.show()
         self.anim.setDuration(100)
-        self.anim.setStartValue(QRect(1570, 540, 0, 505))
-        self.anim.setEndValue(QRect(10, 540, 1580, 505))
+        self.anim.setStartValue(QRect(int(self.s_width * (1600 / 1960)), int(self.s_height * (540 / 1080)), 0,
+                                      int(self.s_height * (505 / 1080))))
+        self.anim.setEndValue(QRect(int(self.s_width * (10 / 1960)),
+                                    int(self.s_height * (540 / 1080)),
+                                    int(self.s_width * (1580 / 1960)),
+                                    int(self.s_height * (500 / 1080))))
         self.anim.start()
         self.text_browser.show()
         self.content = self.dic_news[self.list_view.currentItem().text()]
