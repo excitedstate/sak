@@ -26,4 +26,5 @@
   - Other: whatever
 ## At last...
   Thank you for using this app.
+  
   Thank [TuShare](https://tushare.pro/) for technical support to young team.
