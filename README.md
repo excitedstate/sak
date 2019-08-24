@@ -27,4 +27,9 @@
 ## At last...
   Thank you for using this app.
   
+  Thank [M010K](https://github.com/M010K/Pre_Sak) for his idea to train the model
+  
   Thank [TuShare](https://tushare.pro/) for technical support to young team.
+  
+
+  
