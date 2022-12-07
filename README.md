@@ -1,5 +1,5 @@
 # Before you use, hope you read...
-***Key Words: Machine Learning, Python3***
+***Key Words: Machine Learning, NLP***
 ---
 >> SAK(Stock Analyse Kits) is A desktop application based on ML and PyQt5. 
 ---
@@ -13,17 +13,9 @@
 - tushare >= 1.2.40
 ---
 ## Use the App you just...
-- Download this git
-- Open the terminal
-- `cd $git_path`
+- Download this repo
+- `cd $path`
 - `python3 main.py`
-## About us...
-  Three vegetable chicken. If you have any suggestions, please please please contact us.
-  
-  peace and love...
-## Contact us via...
-  - E-mail: 863178640@qq.com
-  - Other: whatever
 ## At last...
   Thank you for using this app.
   
